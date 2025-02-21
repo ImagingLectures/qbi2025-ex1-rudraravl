@@ -45,6 +45,7 @@ Implement the functions to:
 * Plot x and y in the first subplot
 * Plot x and y with a logarithmic y-axis in the subplot of the same figure
 * Save the image and add it to this README under this line:
+![Task 2 Output](exercise/task2plot.png)
 
 
 ### Task 3
@@ -53,9 +54,9 @@ Implement the functions to:
 * Display z in a figure with correct axis-numbering
 * Add a colorbar
 * Change the colormap to pink
-* Why do you get the warning `invalid value encountered in divide`? Explain: 
+* Why do you get the warning `invalid value encountered in divide`? Explain: We have a 0 in both axes, so there is a div by 0 error at (0, 0). However, numpy just stores this result as a NaN and only throws a warning.
 * Add the image below this line:
-
+![Task 3 Output](exercise/task3plot.png)
 
 ### Task 4 (Based on [Numpy tutorial](https://numpy.org/numpy-tutorials/content/mooreslaw-tutorial.html#))
 In 1965, engineer Gordon Moore predicted that transistors on a chip would double every two years in the coming decade [1]. You’ll compare Moore’s prediction against actual transistor counts in the 53 years following his prediction. You will determine the best-fit constants to describe the exponential growth of transistors on semiconductors compared to Moore’s Law.
@@ -102,6 +103,7 @@ In task 4.5. you will implement a function that predicts the transistor count gi
 Finally, plot the data and predicted values using the implemented functions to create a plot similar to:
 ![](https://numpy.org/numpy-tutorials/_images/6d08960f3c22c8a62d88572e1252d4da44dfa7394bf18c54b0a12b08d0f2bf3e.png).
 Paste it below this line:
+![Task 4 Plot](exercise/task4plot.png)
 
 
 

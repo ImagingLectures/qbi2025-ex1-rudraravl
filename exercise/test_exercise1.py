@@ -92,7 +92,7 @@ def test_expsq():
 
 def test_compute_sinc_of_sqrt_in_range():
     res = compute_sinc_of_sqrt_in_range((-50,50), (-50,50))
-    expected = np.load("sinc.npz")['z']
+    expected = np.load("exercise/sinc.npz")['z']
     np.testing.assert_array_almost_equal(res, expected)
 
 def test_get_A_M():
