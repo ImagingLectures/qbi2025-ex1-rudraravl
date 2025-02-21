@@ -156,7 +156,7 @@ def fit_moore_law(X: np.ndarray, y: np.ndarray)-> tuple[float, float]:
         tuple: (A, B) where A and B are the constants of Moore's Law.
     """
     # X = np.vstack([X, np.ones(len(X))]).T
-    out = lstsq(X, np.log(y))
+    out = lstsq(X, y)
     A, B = out[0], out[1]
     return A, B
 
@@ -175,6 +175,7 @@ def predict_transistors(year: int)->float:
     X = data[:, 0]
     X = np.vstack([X, np.ones(len(X))]).T
     y = data[:, 1]
+    y = np.log(y)
     A, B = fit_moore_law(X, y)
     return np.exp((A * year) + B)
 
